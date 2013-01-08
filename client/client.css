@@ -1,0 +1,12 @@
+.server-connected {
+  background-color: green;
+  color: white;
+}
+
+.server-disconnected {
+  background-color: #b94a48;
+}
+
+.info-box{
+  float: right;
+}

@@ -1,0 +1,19 @@
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+  {{> status}}
+</body>
+
+<template name="status">
+  <div class="info-box well span5">
+    <span>{{datetime}}</span><br>
+    {{#if connected}}
+      <span class="label label-success" >{{status}}</span><br>
+    {{else}}
+      <span class="label label-important" >{{status}}</span><br>
+      <span class="label label-important" >{{msg}}</span><br>    
+    {{/if}}
+  </div>
+</template>
