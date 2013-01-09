@@ -4,16 +4,27 @@
 </head>
 <body>
   {{> status}}
+  {{> myform}}
 </body>
 
 <template name="status">
   <div class="info-box well span5">
-    <span>{{datetime}}</span><br>
-    {{#if connected}}
-      <span class="label label-success" >{{status}}</span><br>
-    {{else}}
-      <span class="label label-important" >{{status}}</span><br>
-      <span class="label label-important" >{{msg}}</span><br>    
-    {{/if}}
+    <center>
+      {{#if connected}}
+        <span class="badge badge-success">
+          {{datetime.time}}<br>
+          {{datetime.date}}<br>
+          Online</span>
+      {{else}}
+        <span class="badge badge-important">
+          {{datetime.time}}<br>
+          {{datetime.date}}<br>
+          Offline</span>
+      {{/if}}
+    </center>
   </div>
+</template>
+
+<template name="myform">
+  <input type="text" class="item-select" />
 </template>
